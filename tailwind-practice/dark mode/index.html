@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" id="root" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <script>
+      function changeMode() {
+        let el = document.getElementById("root");
+        if (el.className == "dark") {
+          console.log("mode");
+          document.getElementById("root").className = "light";
+        } else {
+          document.getElementById("root").className = "dark";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <button
+      class="border-2 p-4 m-5 rounded-xl font-bold dark:bg-gray-900 dark:text-white hover:bg-cyan-300 hover:text-black"
+      onclick="changeMode()"
+    >
+      Click to Change Mode
+    </button>
+    <h1
+      class="text-4xl dark:bg-gray-800 dark:text-white font-bold h-20 text-center pt-3"
+    >
+      Mode Changer
+    </h1>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
